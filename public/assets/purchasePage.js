@@ -48,32 +48,32 @@ $('#signin').click(function() {
 //       signintoggle = false
 //     }
 // });
-var specialpoptoggle = false
-var isAnimating2 = false;
-$('#sOffers').hover(function() {
-    if (isAnimating2) {
-        return;
-    }
-    isAnimating2 = true;
-    specialpoptoggle = true;
-    $("#sOfferInfo").slideToggle();
-    setTimeout(function() {
-        isAnimating2 = false;
-    }, 350);
-});
-var morepoptoggle = false
-var isAnimating3 = false;
-$('#mOffers').hover(function() {
-    if (isAnimating3) {
-        return;
-    }
-    isAnimating3 = true;
-    morepoptoggle = true;
-    $("#mOfferInfo").slideToggle();
-    setTimeout(function() {
-        isAnimating3 = false;
-    }, 350);
-});
+// var specialpoptoggle = false
+// var isAnimating2 = false;
+// $('#sOffers').hover(function() {
+//     if (isAnimating2) {
+//         return;
+//     }
+//     isAnimating2 = true;
+//     specialpoptoggle = true;
+//     $("#sOfferInfo").slideToggle();
+//     setTimeout(function() {
+//         isAnimating2 = false;
+//     }, 350);
+// });
+// var morepoptoggle = false
+// var isAnimating3 = false;
+// $('#mOffers').hover(function() {
+//     if (isAnimating3) {
+//         return;
+//     }
+//     isAnimating3 = true;
+//     morepoptoggle = true;
+//     $("#mOfferInfo").slideToggle();
+//     setTimeout(function() {
+//         isAnimating3 = false;
+//     }, 350);
+// });
 // $('#sOffers').hover(function() {
 //   // console.log("Hovering...")
 //   $('#sOfferInfo').slideToggle();

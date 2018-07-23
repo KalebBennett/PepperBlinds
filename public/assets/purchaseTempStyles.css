@@ -60,39 +60,40 @@ body::after {
 }
 /* ------------------------------------------------------------------------------------ */
 #OfferStuff {
+  /* position:absolute; */
   /* width:100%;
   background-color:gray;
   height:50rem; */
 }
-#specialoffers {
+#PurchaseStuff {
   font-size:40px;
   font-weight:800;
   margin-left:20px;
   font-style:oblique;
   /* text-decoration:underline; */
 }
-#sofontstuff {
+#LookingToBuy {
   font-style:oblique;
   font-weight:500;
 }
-#sOffers {
+#theOffer {
   float:left;
   background-color:transparent;
-  height:25vh;
-  width:20rem;
+  height:45vh;
+  width:33.5rem;
   margin-left:20px;
   font-style:normal;
   background-image:url("https://lh5.googleusercontent.com/cAnhBOsy_kyaJgPmNtUOCabNvYQhgDdDk1eVKpw_TtAe1sYGAczkW6rFkqFIPUQJGrHADh28p2BIHdI-arVE5u3y6Bccf8ZXI0ZpIhiGoUyIYRd9AG7z_IsupqBt44aw58wlku6Dbz4");
   background-color:transparent;
   background-repeat:no-repeat;
-  background-size:20rem;
+  background-size:33.5rem;
   border-style:solid;
   border-width:thin;
   border-color:black;
 }
-#sOfferInfo {
-  height:10rem;
-  width:19.9rem;
+#theOfferInfo {
+  height:26.45rem;
+  width:60rem;
   display:inline-block;
   background-color:#44a8c5;
   border-style:solid;
@@ -100,26 +101,53 @@ body::after {
   border-color:black;
   margin-left:-2.5px;
   position:absolute;
+  bottom:19.5rem;
+  left:36.25rem;
+  position:absolute;
 }
-#dahspecnameinf {
+#theOfferName {
   margin-left:10px;
-  font-size:25px;
-  font-style:oblique;
+  font-size:35px;
   font-weight:800;
+  font-style:normal;
+  /* text-decoration:underline; */
   color:black;
 }
-#dahspecdescinf {
+#theOfferDesc {
   margin-left:5px;
-  font-size:20px;
+  font-size:25px;
   font-style:normal;
   font-weight:500;
   color:white;
 }
 /* --------- */
+#WindowStuff {
+  /* position:absolute; */
+  /* left:36.3rem; */
+  /* bottom:21rem; */
+  opacity:.7;
+  width:40rem;
+  height:16.9rem;
+  margin-top:9.5rem;
+  margin-left:33.7rem;
+  background-color:white;
+  border-style:solid;
+  border-width:2px;
+  border-color:black;
+  border-left-width:0px;
+  border-bottom-width:0px;
+}
+#WidthText {
+  font-size:30px;
+}
+#SelectWindowWidth {
+  border-width:2px;
+}
+/* --------- */
 #bar {
   height:50px;
   width:100%;
-  margin-top:21rem;
+  margin-top:42rem;
   background-color:#105A92;
   padding-bottom:20px;
   border-style:groove;
@@ -160,57 +188,10 @@ body::after {
   font-style:oblique;
   display:inline-block;
 }
-/* --------- */
-#moreoffers {
-  margin-left:20px;
-  margin-top:2.5rem;
-}
-#mofontstuff {
-  font-size:35px;
-  font-weight:800;
-  font-style:oblique;
-}
-#mOffers {
-  /* background-color:gray; */
-  height:20vh;
-  width:15rem;
-  margin-left:20px;
-  font-style:normal;
-  background-color:transparent;
-  background-image:url("https://lh4.googleusercontent.com/jcULO_hzRPwqrSZEzDAJvumBFccdcPSgQKVA3hseHm_U_MVdgLgw4atWCWOSe2UiqcKGwjP8_0xpjWoIhvO6MCiy_DSuUx6Ba0S5ZImxr_WeTxM5aVn9TaItOm4X-FGR4rO_KtBjDug");
-  background-color:transparent;
-  background-repeat:no-repeat;
-  background-size:15rem;
-}
-#mOfferInfo {
-  height:10rem;
-  width:14.9rem;
-  display:inline-block;
-  background-color:#44a8c5;
-  border-style:solid;
-  border-width:medium;
-  border-color:black;
-  margin-left:-2.5px;
-  position:absolute;
-}
-#dahmorenameinf {
-  margin-left:10px;
-  font-size:25px;
-  font-style:oblique;
-  font-weight:800;
-  color:black;
-}
-#dahmoredescinf {
-  margin-left:5px;
-  font-size:20px;
-  font-style:normal;
-  font-weight:500;
-  color:white;
-}
-.gotoblindpurchase {
-  text-decoration:none;
-  color:black;
-}
+
+
+
+
 /* ------------------------------------------------------------------------------------ */
 #paypalstuff {
   position:fixed;
