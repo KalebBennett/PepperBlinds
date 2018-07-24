@@ -24,26 +24,14 @@
             </div>
             <div id="WindowStuff">
               <div id="TheWidth">
-                <h1 id="WidthText">Window Width</h1>
-                <select class="SelectWindowWidth">
-                  <option value="foursix">4 feet, 6 inches</option>
-                  <option value="eighttwelve">8 feet, 12 inches</option>
-                  <option value="custom">Custom</option>
-                </select>
-              </div>
-              <div id="TheLength">
-                <h1 id="LengthText">Window Length</h1>
-                <select class="SelectWindowLength">
-                  <option value="foureight">4 feet, 8 inches</option>
-                  <option value="eightsixteen">8 feet, 16 inches</option>
-                  <option value="custom">Custom</option>
-                </select>
-              </div>
-            </div>
-            <div id="BTNSTUFF">
-              <form action="/select" method="post">
-                <button type="submit" id="subbtn">Next</button>
-              </form>
+                <h1 id="WidthText">Window Size</h1>
+                <form class="" action="/select" method="post">
+                      Width In Inches (Use Just Numbers)
+                      <input type="number" step='0.01' name="width" value="Insert Width">
+                      Height In Inches (Use Just Numbers)
+                      <input type="number" step='0.01' name="Height" value="Insert Height">
+                      <button type="select" name="button">Select</button>
+                    </form>
             </div>
           </div>
         </div>

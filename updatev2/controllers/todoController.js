@@ -90,26 +90,31 @@ app.get('/todo', isLoggedIn, function(req, res) {
       res.render('admin')
     })
 
-    app.post('/addOptions',isLoggedIn, function (req, res) {
-      console.log(req.body);
-      let sql = 'INSERT INTO options (imageLink, style, ppsf, name) VALUES("' + req.body.imageLink + '", "' + req.body.style + '"," '+  req.body.ppsf + '"," ' + req.body.name + '");';
-      console.log(sql);
-      db.query(sql, (err, results) => {
-        if (err) throw err;
-        // console.log(results);
-        res.render('admin', {todos: results});
-      });
-    });
-
     app.get('/treatment/:id',function(req, res) {
-      console.log('we be getting');
-      let sql =`SELECT * FROM options WHERE id = ${req.params.id};`;
-      db.query(sql, (err, result) => {
-        if (err) throw err;
-        console.log(result);
-        res.render('purchaseTemplate', {option: result, user:req.user}); //CODE!!!!!!!!!!!!!!!!!!!!!!!
+        console.log('we be getting');
+        var theUser = req.session.user;
+
+        let sql =`SELECT * FROM options WHERE id = ${req.params.id};`;
+        db.query(sql, theUser, (err, result) => {
+          if (err) throw err;
+          var sessData = req.session;
+          sessData.option = result;
+          info = sessData.option
+          console.log(theUser);
+          console.log(info );
+          res.render('purchaseTemplate', {option: info, theUser: theUser}); //CODE!!!!!!!!!!!!!!!!!!!!!!!
+        });
       });
-    });
+
+      // MY NEW CODE
+
+      app.post('/select', function (req, res) {
+        console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+        console.log(req.body.width * req.body.height);
+        var sessData = req.session;
+        console.log(sessData.option);
+      })
+
 
 
 
