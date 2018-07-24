@@ -1,0 +1,367 @@
+body {
+  padding:0;
+  margin:0;
+}
+br {
+}
+a {
+  text-decoration:none;
+}
+#buttonsbox {
+  position:fixed;
+  top:5px;
+  background-color:#54D0BA;
+  margin-top:-22px;
+  height:75px;
+  width:100%;
+  display:inline-block;
+}
+#sitename {
+  display:inline-block;
+  font-style:oblique;
+  font-family: Arial, "Helvetica", sans-serif;
+}
+.sign {
+  background-color:#44a8c5;
+  text-align:center;
+  border-style:none;
+  padding:0;
+  border:0;
+  border-radius:10px;
+  height:45px;
+  width:100px;
+  margin-top:-75px;
+}
+#signin {
+    float: right;
+    margin-right:110px;
+    /* border-width:thin; */
+    border-style:solid;
+    border-color:black;
+}
+#signup {
+    float: right;
+    /* border-width:thin; */
+    border-style:solid;
+    border-color:black;
+}
+body::after {
+  content:"";
+  background-image:url("https://www.zingashome.com/wp-content/uploads/2017/02/shades-indianapolis-home-blurb.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:absolute;
+  opacity:.5;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index: -1;
+}
+/* ------------------------------------------------------------------------------------ */
+#OfferStuff {
+  /* position:absolute; */
+  /* width:100%;
+  background-color:gray;
+  height:50rem; */
+}
+#PurchaseStuff {
+  font-size:40px;
+  font-weight:800;
+  margin-left:20px;
+  font-style:oblique;
+  /* text-decoration:underline; */
+}
+#LookingToBuy {
+  font-style:oblique;
+  font-weight:500;
+}
+#theOffer {
+  float:left;
+  background-color:transparent;
+  height:26.65rem;
+  width:33.5rem;
+  margin-left:20px;
+  font-style:normal;
+  background-color:transparent;
+  background-repeat:no-repeat;
+  background-size:33.5rem;
+  border-style:solid;
+  border-width:thin;
+  border-color:black;
+  position:absolute;
+}
+#theOfferInfo {
+  height:26.45rem;
+  width:60rem;
+  display:inline-block;
+  background-color:#44a8c5;
+  border-style:solid;
+  border-width:medium;
+  border-color:black;
+  margin-left:33.5rem;
+  margin-top:-1.5px;
+  /* position:absolute; */
+  /* bottom:19.5rem; */
+  /* left:36.25rem; */
+  /* position:absolute; */
+}
+#theOfferName {
+  margin-left:10px;
+  font-size:35px;
+  font-weight:800;
+  font-style:normal;
+  color:black;
+}
+#theOfferDesc {
+  margin-left:5px;
+  font-size:25px;
+  font-style:normal;
+  font-weight:500;
+  color:white;
+  top:2.5rem;
+}
+/* --------- */
+#WindowStuff {
+  position:absolute;
+  top:0;
+  opacity:.7;
+  width:40rem;
+  height:16.9rem;
+  margin-top:9.5rem;
+  margin-left:33.7rem;
+  background-color:white;
+  border-style:solid;
+  border-width:2px;
+  border-color:black;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  font-size:10px;
+}
+#WidthText {
+  font-size:25px;
+}
+#LengthText {
+  font-size:25px;
+}
+#subbtn {
+  height:35px;
+  width:100px;
+  font-size:20px;
+  background-color:white;
+  opacity:.7;
+  position:absolute;
+  top:24rem;
+  left:87rem;
+}
+/* --------- */
+#bar {
+  height:50px;
+  width:100%;
+  margin-top:42rem;
+  background-color:#105A92;
+  padding-bottom:20px;
+  border-style:groove;
+  border-width:thin;
+  border-color:black;
+}
+#informer {
+  margin-top:-14px;
+  text-align:center;
+  font-weight:200;
+  font-size:25px;
+  color:white;
+}
+#buypepplusbtn {
+  color:white;
+}
+#idk1 {
+  display:inline-block;
+  font-size:30px;
+  font-style:oblique;
+  text-align:center;
+  color:white;
+}
+#presstobuyplusnow {
+  position:fixed;
+  display:inline-block;
+  background-color:transparent;
+  border-style:none;
+  padding:0;
+}
+#sep1 {
+  color:white;
+  font-style:oblique;
+  display:inline-block;
+}
+#sep2 {
+  color:white;
+  font-style:oblique;
+  display:inline-block;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------ */
+#paypalstuff {
+  position:fixed;
+  left:25%;
+  width:50%;
+  margin:auto;
+  margin-top:-30%;
+  border-style:outset;
+  border-width:medium;
+  border-color:black;
+  border-radius:50px;
+  background-color:#105A92;
+  /* display:none; */
+}
+#closepaypal {
+  background-color:transparent;
+  border-radius:2.5px;
+  border-style:none;
+  font-size:25px;
+  float:right;
+  height:35px;
+  width:35px;
+  margin-right:20px;
+  margin-top:15px;
+}
+#paypepplus {
+  color:black;
+  font-size:25px;
+  /* background-color:#105A92; */
+  /* width:50%; */
+  text-align:center;
+  /* margin:auto; */
+  /* margin-top:-30%; */
+  /* height:345px; */
+  /* border-style:outset; */
+  /* border-width:medium; */
+  /* border-color:black; */
+  /* border-radius:50px; */
+  /*display:none;*/ /*-----PepperPlus PayPal Stuff Show and Hide-----*/
+}
+#pepplus {
+  display:inline-block;
+  color:white;
+  font-size:30px;
+  font-style:oblique;
+  text-align:center;
+}
+#pepplus2 {
+  display:inline-block;
+  color:white;
+  font-size:30px;
+  font-style:oblique;
+  text-align:center;
+}
+#payinf {
+  color:white;
+  font-size:30px;
+  font-style:oblique;
+  text-align:center;
+}
+#payinf1 {
+  display:inline-block;
+  color:white;
+  font-size:30px;
+  text-align:center;
+}
+#payinf1-2 {
+  display:inline-block;
+  color:black;
+  font-size:30px;
+  text-align:center;
+}
+#payinf2 {
+  color:white;
+  font-size:30px;
+  text-align:center;
+  margin-top:-25px
+}
+#paypalbtn {
+  height:100px;
+  width:400px;
+  padding:0;
+  border-width:0;
+  background-color:transparent;
+  background-image: url(https://lh4.googleusercontent.com/7cUfEWb9D1R2kTCat9esjnxzFNg-l1l5gHBa7xyODpPxWontT7b8bkn0z04q2u4pQXlJVau2mRhS6CdutZ0J9WR7S7I_4T2y2bxi6CjvqhGPQm0YJJpkDaIR_QVdfBcv3B7G4d1an0I);
+  background-repeat:no-repeat;
+  background-size:400px;
+  background-position:center;
+  margin-top:-10px;
+}
+/* ------------------------------------------------------------------------------------ */
+#loginstuff {
+  position:fixed;
+  right:0;
+  top:462.5px;
+  height:50rem;
+  width:25rem;
+  margin-top:-405px;
+  background-color:#44a8c5;
+  float:right;
+  opacity:.95;
+  border-style:ridge;
+  border-width:medium;
+  border-color:black;
+  display:block;
+}
+#signintext {
+  text-align:center;
+  font-style:oblique;
+  font-weight:100;
+  color:black;
+}
+.userinfo {
+  background-color:white;
+  height:25px;
+  margin-top:10px;
+  margin-left:10px;
+}
+.signinoption {
+  height:50px;
+  width:200px;
+  margin-left:10px;
+  border-style:none;
+  padding:0;
+}
+#facebooksignin {
+  background-color:transparent;
+  background-image:url("https://brentbrookbush.com/wp-content/themes/brent/images/facebook-login.png");
+  /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7XmhT1nICPjerWbp6hH4_JidDoHcqPmMUzfDWRK6YErqnwyml"); */
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:200px;
+}
+#gmailsignin {
+  background-color:transparent;
+  background-image:url("https://lh5.googleusercontent.com/gRHwSZUjMvN7s57LC4zaIGkPTr2Ap1Q8iU321Tc7KkOynIc_R2-n_XEKyyHSEEgv4tOVBpTVPBPQibDoJb2e2VOM6UhrLXlZUOc-dQVWosVELhzZcEJHuek3Kn-lhXJSRx4xTjpWu7Q");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:200px;
+}
+#twittersignin {
+  background-color:transparent;
+  background-image:url("https://lh5.googleusercontent.com/slrdKlXTOe3Ng2K2OK2CGpCk0x7Eka2Vaho9BnNK1l_gpMe8B0EYF74X35aAFzLrotQbv7hL5WJozmKZNL98KQyVA7x7fzCndh8oFyvDqL8VqOkdhqOEMWzuprJyWxjuQH0O0o5t_Wo");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:200px;
+}
+/* ------------------- */
+#orsignup {
+  margin-top:-15.5rem;
+  margin-left:12.5rem;
+}
+#orsign {
+  color:black;
+  font-size:25px;
+  font-weight:200;
+}
+#orgotosignup {
+  /* text-decoration:none; */
+  color:white;
+}
+/* ------------------------------------------------------------------------------------ */
