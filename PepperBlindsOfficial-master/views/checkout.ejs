@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/checkout.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="/assets/purchaseTempStyles.css">
+    <title>PepperBlinds | Homepage</title>
+  </head>
+  <body>
+    <div id="backgroundimage">
+      <div id="buttonsbox">
+        <h1 id="sitename">Pepper Blinds<h1>
+        <button type="button" class="sign" id="signin">Log In</button>
+        <button type="button" class="sign" id="signup">Sign Up</button>
+      </div> <!-- TopBarStuff -->
+    </div>
+    <div class="boxUpTop">
+        <div id="whiteBox">
+          <br>
+          <h1 id="headingThing">Your Order:</h1>
+           <img id="headingThing"src="<%=option.imageLink%>" alt="Your Product">
+          <p id="headingThing2"> <%=option.name%></p>
+          <p id = 'headingThing2'> Product Cost:<small> <%=price%> </small></p>
+          <p id = 'headingThing2'> Contractor:<small> <%=contractor[0].name%> Charging $<%=contractor[0].hourlyRate%> Per Hour</small></p>
+          <form action="/buy" method="post">
+            <p id = 'headingThing2'> Address:<small> <input type="text" name="address" value="Your Address Here"> </small></p> <br>
+            <div id="headingThing">
+              <button type="submit" name="button">Order Products And Pay At Door</button>
+
+            </div>
+          </form>
+
+        <div>
+
+    </div>
+  </body>
+  <script src="/assets/purchasePage.js" charset="utf-8">></script>
+</html>
