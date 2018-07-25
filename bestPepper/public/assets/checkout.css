@@ -1,0 +1,35 @@
+
+.boxUpTop {
+  padding-top:75px;
+}
+#whiteBox {
+  border-top:75px;
+  background-color: white;
+  width:50%;
+  margin: 0 auto;
+
+}
+ul {
+  padding:none;
+}
+
+#headingThing {
+  padding-left:2%;
+  padding-bottom:2%;
+}
+
+#headingThing2 {
+  padding-left:2%;
+  font-size:20px;
+}
+
+h3 {
+  padding:none;
+  border:none;
+  margin:none;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+
+}

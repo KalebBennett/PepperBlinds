@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            }
+
+            tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+
+
+
+            #whiteBox {
+              padding:1%;
+            }
+      </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="/assets/homestyles.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/checkout.css">
+
+    <title></title>
+  </head>
+  <body>
+    <div id="buttonsbox">
+      <h1 id="sitename"><a href="/">Pepper Blinds</a> <h1>
+      <button type="button" class="sign" id="signin">Hello World!</button>
+    </div>
+
+    <div class="surroundIt">
+
+    <div class="boxUpTop">
+        <div id="whiteBox">
+
+<div id="surround">
+<h2>Your Past Orders</h2>
+
+        <table>
+          <tr>
+            <th>Product Name</th>
+            <th>Contractor Name</th>
+            <th>Price</th>
+            <th>Your Delivery Address</th>
+          </tr>
+          <% for (var i = 0; i < orders.length; i++) {%>
+            <tr>
+              <td><%=orders[i].optionName%></td>
+              <td><%=orders[i].contractorName%></td>
+              <td><%=orders[i].price%></td>
+              <td><%=orders[i].address%></td>
+            </tr>
+          <% } %>
+
+
+
+
+
+
+    </div>
+  </div>
+
+  </body>
+</html>

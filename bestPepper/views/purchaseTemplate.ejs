@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50vw;
+      height:50vh;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    </style>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="/assets/purchaseTempStyles.css">
+    <title>PepperBlinds | Homepage</title>
+  </head>
+  <body>
+    <div id="backgroundimage">
+      <div id="buttonsbox">
+        <img src="/assets/therealdeal.png" alt="logo" id="dahrealogodeal">
+        <h1 id="sitename">Pepper Blinds <h1>
+        <button type="button" class="sign" id="signin">Hello, <%=theUser.username%>!</button>
+      </div> <!-- TopBarStuff -->
+      <br><br>
+      <div id="OfferStuff">
+        <div id="PurchaseStuff">
+          <h4 id="LookingToBuy">Looking to Buy <%=theUser.firstname%>?...</h4>
+          <div id="theOffer" style="background-image:url('<%=option[0].imageLink%>');">
+            <div id="theOfferInfo">
+                <h1 id="theOfferName"> <%=option[0].name%></h1>
+                <div class="daodahawtbox">
+                  <p id="theOfferDesc"><%=option[0].style%></p>
+                </div>
+            </div>
+            <div id="WindowStuff">
+              <div id="TheWidth">
+                <h1 id="WidthText">Window Size</h1>
+                <button id="myBtn">Need Help?</button>
+
+                <form class="" action="/select" method="post">
+                      Width In Inches (Use Just Numbers)
+                      <input type="number" step='0.01' name="width" value="Insert Width">
+                      Height In Inches (Use Just Numbers)
+                      <input type="number" step='0.01' name="height" value="Insert Height">
+                      <button type="select" name="button">Select</button>
+                    </form>
+            </div>
+          </div>
+        </div>
+        <div id="bar">
+          <h3 id="informer"><a id="buypepplusbtn" href="#">Buy <h3 id="idk1">Pepper+</h3></a> : Unlimited Warranty   |   10% Off Future Blinds   |   25% Off Installations   |   $10 Per Year</h3>
+        </div>
+      </div>
+      <div id="paypalstuff">
+        <button type="button" id="closepaypal">X</button>
+        <div id="paypepplus">Sign up for <h1 id="pepplus">Pepper</h1><h1 id="pepplus2">+</h1>
+          <div id="payinfostuff">
+            <h1 id=payinf>Unlimited Warranty  |   10% Off Future Blinds  |   25% Off Installations </h1>
+            <!-- <br class="break"> -->
+            <h1 id="payinf1">$10</h1><h1 id=payinf1-2>/Year</h1>
+            <!-- <br class="break"> -->
+            <h1 id="payinf2">You Would Save $25 On Your Current Purchase </h1>
+            <button type="button" id="paypalbtn">
+              <!-- <img href="https://i0.wp.com/ascendhealthdenver.com/new/wp-content/uploads/2015/02/paypal-checkout-button.png?fit=505%2C262" alt="paypal"> -->
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="loginstuff">
+        <h1 id="signintext">Log In!</h1>
+          <input type="text" placeholder="Username" class="userinfo" id="signinuser">
+          <br>
+          <input type="text" placeholder="Password" class="userinfo" id=signinpass>
+          <br><br>
+          <button type="button" class="signinoption" id="facebooksignin"></button>
+          <br>
+          <button type="button" class="signinoption" id="gmailsignin"></button>
+          <br>
+          <button type="button" class="signinoption" id="twittersignin"></button>
+          <div id="orsignup">
+            <h1 id="orsign">Or <a href="#" id="orgotosignup">Sign Up!</a></h1>
+          </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span><center>
+                  <h1>Here is how to measure a window!</h1>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/xFCylEj_pzs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <p>Remember to convert your measurements in inches for Pepper Blinds!</p></center>
+                </div>
+
+              </div>
+              <script>
+              // Get the modal
+              var modal = document.getElementById('myModal');
+
+              // Get the button that opens the modal
+              var btn = document.getElementById("myBtn");
+
+              // Get the <span> element that closes the modal
+              var span = document.getElementsByClassName("close")[0];
+
+              // When the user clicks the button, open the modal
+              btn.onclick = function() {
+                  modal.style.display = "block";
+              }
+
+              // When the user clicks on <span> (x), close the modal
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
+
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                  }
+              }
+              </script>
+  </body>
+  <script src="/assets/purchasePage.js" charset="utf-8">></script>
+</html>
