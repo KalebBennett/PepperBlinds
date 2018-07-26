@@ -200,6 +200,88 @@ app.get('/treatment/:id',function(req, res) {
   })
 })
 
+app.get('/treatment-/:id',function(req, res) {
+      console.log('we be getting');
+      var theUser = req.session.user;
+
+      let sql =`SELECT * FROM options WHERE id = ${req.params.id};`;
+      db.query(sql, theUser, (err, result) => {
+        if (err) throw err;
+        var sessData = req.session;
+        sessData.option = result;
+        info = sessData.option
+        console.log(theUser);
+        console.log(info );
+        res.render('SignedOutpurchaseTemplate', {option: info, theUser: theUser}); //CODE!!!!!!!!!!!!!!!!!!!!!!!
+      });
+    });
+
+    // MY NEW CODE
+
+
+    app.post('/addOptions', function (req, res) {
+         console.log(req.body);
+         let sql = 'INSERT INTO options (imageLink, style, ppsf, name) VALUES("' + req.body.imageLink + '", "' + req.body.style + '"," '+  req.body.ppsf + '"," ' + req.body.name + '");';
+         console.log(sql);
+         db.query(sql, (err, results) => {
+           if (err) throw err;
+           // console.log(results);
+           res.render('admin', {todos: results});
+         });
+       });
+       app.get('/profile/:id',function(req, res) {
+           console.log('get2datprofile');
+           var theUser = req.session.user;
+
+           let sql =`SELECT * FROM users WHERE id = ${req.params.id};`;
+           db.query(sql, theUser, (err, result) => {
+             if (err) throw err;
+             var sessData = req.session;
+             sessData.option = result;
+             info = sessData.option
+             console.log(theUser);
+             console.log(info);
+             res.render('SignedOutpurchaseTemplate', {option: info, theUser: theUser}); //CODE!!!!!!!!!!!!!!!!!!!!!!!
+           });
+         });
+
+         app.post('/select', isLoggedIn, function (req, res) {
+        console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+          var theUser = req.session.user;
+          console.log(theUser);
+        let w = req.body.width;
+        let h = req.body.height;
+        var sessData = req.session;
+        console.log(sessData.option[0].ppsf);
+        var price = ((w/12)*(h/12))*sessData.option[0].ppsf;
+        sessData.price = price
+        console.log(sessData.price);
+        let sql = `SELECT * FROM contractors;`
+        db.query(sql, (err, result)=>{
+          console.log(result);
+          res.render ('select', {contractors:result, option: sessData.option, theUser:theUser, price})
+        });
+      });
+
+      app.post('/checkout', isLoggedIn, function (req, res) {
+        console.log("---------------------------");
+        var sessData = req.session;
+
+        console.log(sessData.price);
+        console.log(sessData.user);
+        console.log(sessData.option[0]);
+        console.log(req.body.contractor);
+        let sql = 'SELECT * FROM contractors WHERE id = "' + req.body.contractor +'";';
+        console.log(sql);
+        db.query(sql, (err, result)=> {
+          console.log(result);
+          sessData.contractor = result;
+          res.render('checkout', {price:sessData.price, user: sessData.user, option:sessData.option[0], contractor: sessData.contractor  })
+
+        })
+      });
+
+
 app.get('/orders', isLoggedIn, function (req, res) {
   var sessData = req.session;
   sessData.user = req.user;

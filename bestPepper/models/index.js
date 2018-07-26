@@ -5,7 +5,7 @@ var path      = require("path");
 var Sequelize = require("sequelize");
 var env       = process.env.NODE_ENV || "development";
 var config    = require(path.join(__dirname, '..', 'db.js'));
-var sequelize = new Sequelize("todo", "root", "Gw137797", config);
+var sequelize = new Sequelize("todo", "root", "Luke1230", config);
 var db        = {};
 
 
